@@ -1,0 +1,10 @@
+[ "${MYSQL_PORT}" ] && bin/config set mysql.port "${MYSQL_PORT}"
+[ "${MYSQL_PASS}" ] && bin/config set mysql.pass "${MYSQL_PASS}"
+[ "${MYSQL_USER}" ] && bin/config set mysql.user "${MYSQL_USER}"
+[ "${MYSQL_HOST}" ] && bin/config set mysql.host "${MYSQL_HOST}"
+[ "${CLUSTER_ADDRESSES}" ] && bin/config set cluster.addresses "${CLUSTER_ADDRESSES}"
+[ "${PHABRICATOR_BASE_URI}" ] && bin/config set phabricator.base-uri "${PHABRICATOR_BASE_URI}"
+[ "${PYGMENTS_ENABLED}" ] && bin/config set pygments.enabled "${PYGMENTS_ENABLED}"
+[ "${PHABRICATOR_TIMEZONE}" ] && bin/config set phabricator.timezone "${PHABRICATOR_TIMEZONE}"
+[ "${SECURITY_ALTERNATE_FILE_DOMAIN}" ] && bin/config set security.alternate-file-domain "${SECURITY_ALTERNATE_FILE_DOMAIN}"
+

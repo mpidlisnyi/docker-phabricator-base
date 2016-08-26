@@ -23,15 +23,13 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN pip install pygments
 
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
-    PHABRICATOR_VERSION=stable \
-    LIBPHUTIL_VERSION=stable   \
-    ARCANIST_VERSION=stable
+    REPOSITORY_LOCAL_PATH=/var/repo
 
-RUN mkdir -p /srv
+RUN mkdir -p /srv $REPOSITORY_LOCAL_PATH
 WORKDIR /srv
-RUN git clone --branch $LIBPHUTIL_VERSION https://github.com/phacility/libphutil.git && \
-  git clone --branch $ARCANIST_VERSION https://github.com/phacility/arcanist.git && \
-  git clone --branch $PHABRICATOR_VERSION https://github.com/phacility/phabricator.git
+RUN git clone --branch stable https://github.com/phacility/libphutil.git && \
+  git clone --branch stable https://github.com/phacility/arcanist.git && \
+  git clone --branch stable https://github.com/phacility/phabricator.git
 
 COPY phabricator_configs_init.sh /phabricator_configs_init.sh
 COPY msmtp.conf.erb /msmtp.conf.erb

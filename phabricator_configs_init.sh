@@ -8,4 +8,5 @@
 [ "${PHABRICATOR_TIMEZONE}" ] && bin/config set phabricator.timezone "${PHABRICATOR_TIMEZONE}"
 [ "${SECURITY_ALTERNATE_FILE_DOMAIN}" ] && bin/config set security.alternate-file-domain "${SECURITY_ALTERNATE_FILE_DOMAIN}"
 [ "${METAMTA_MAIL_ADAPTER}" ] && bin/config set metamta.mail-adapter "${METAMTA_MAIL_ADAPTER}"
+[ "${REPOSITORY_LOCAL_PATH}" ] && bin/config set repository.default-local-path "${REPOSITORY_LOCAL_PATH}"
 

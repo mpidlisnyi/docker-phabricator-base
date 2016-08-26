@@ -36,6 +36,6 @@ RUN git clone --branch $LIBPHUTIL_VERSION https://github.com/phacility/libphutil
 COPY phabricator_configs_init.sh /phabricator_configs_init.sh
 COPY msmtp.conf.erb /msmtp.conf.erb
 
-RUN printf '#!/bin/sh\nexec msmtp -C /etc/msmtp.conf $*' > /bin/sendmail && chmod -x /bin/sendmail
+RUN printf '#!/bin/sh\nexec msmtp -C /etc/msmtp.conf $*' > /usr/sbin/sendmail && chmod +x /usr/sbin/sendmail
 
 WORKDIR /

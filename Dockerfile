@@ -4,6 +4,7 @@ MAINTAINER maksim@nightbook.info
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y \
         ruby \
         python-pip \
+        msmtp \
         git \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
@@ -33,5 +34,8 @@ RUN git clone --branch $LIBPHUTIL_VERSION https://github.com/phacility/libphutil
   git clone --branch $PHABRICATOR_VERSION https://github.com/phacility/phabricator.git
 
 COPY phabricator_configs_init.sh /phabricator_configs_init.sh
+COPY msmtp.conf.erb /msmtp.conf.erb
+
+RUN printf '#!/bin/sh\nexec msmtp -C /etc/msmtp.conf $*' > /bin/sendmail && chmod -x /bin/sendmail
 
 WORKDIR /

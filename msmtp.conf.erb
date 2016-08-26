@@ -1,0 +1,8 @@
+account default
+from <%= ENV['MSMTP_FROM'] %>
+domain <%= ENV['MSMTP_DOMAIN'] %>
+host <%= ENV['MSMTP_HOST'] %>
+port <%= ENV['MSMTP_PORT'] %>
+auth <%= ENV['MSMTP_AUTH'] ? ENV['MSMTP_AUTH'] : 'digest-md5' %>
+user <%= ENV['MSMTP_USER'] %>
+password <%= ENV['MSMTP_PASSWORD'] %>

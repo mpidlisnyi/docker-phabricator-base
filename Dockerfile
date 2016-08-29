@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install --no-install-recommends --no-install-sugge
         python-pip \
         msmtp \
         git \
+        openssh-client \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \

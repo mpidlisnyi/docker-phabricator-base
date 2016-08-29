@@ -9,4 +9,6 @@
 [ "${SECURITY_ALTERNATE_FILE_DOMAIN}" ] && bin/config set security.alternate-file-domain "${SECURITY_ALTERNATE_FILE_DOMAIN}"
 [ "${METAMTA_MAIL_ADAPTER}" ] && bin/config set metamta.mail-adapter "${METAMTA_MAIL_ADAPTER}"
 [ "${REPOSITORY_LOCAL_PATH}" ] && bin/config set repository.default-local-path "${REPOSITORY_LOCAL_PATH}"
+[ "${AUTH_REQUIRE_APPROVAL}" ] && bin/config set auth.require-approval "${AUTH_REQUIRE_APPROVAL}"
+[ "${AUTH_REQUIRE_EMAIL_VERIFICATION}" ] && bin/config set auth.require-email-verification "${AUTH_REQUIRE_EMAIL_VERIFICATION}"
 

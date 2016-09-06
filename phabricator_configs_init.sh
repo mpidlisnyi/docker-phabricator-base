@@ -11,4 +11,9 @@
 [ "${REPOSITORY_LOCAL_PATH}" ] && bin/config set repository.default-local-path "${REPOSITORY_LOCAL_PATH}"
 [ "${AUTH_REQUIRE_APPROVAL}" ] && bin/config set auth.require-approval "${AUTH_REQUIRE_APPROVAL}"
 [ "${AUTH_REQUIRE_EMAIL_VERIFICATION}" ] && bin/config set auth.require-email-verification "${AUTH_REQUIRE_EMAIL_VERIFICATION}"
+[ "${AMAZON_S3_ACCESS_KEY}" ] && bin/config set amazon-s3.access-key "${AMAZON_S3_ACCESS_KEY}"
+[ "${AMAZON_S3_SECRET_KEY}" ] && bin/config set amazon-s3.secret-key "${AMAZON_S3_SECRET_KEY}"
+[ "${AMAZON_S3_REGION}" ] && bin/config set amazon-s3.region "${AMAZON_S3_REGION}"
+[ "${AMAZON_S3_ENDPOINT}" ] && bin/config set amazon-s3.endpoint "${AMAZON_S3_ENDPOINT}"
+[ "${STORAGE_S3_BUCKET}" ] && bin/config set storage.s3.bucket "${STORAGE_S3_BUCKET}"
 

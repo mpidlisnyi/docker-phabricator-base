@@ -30,6 +30,7 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
     ARCANIST_COMMIT=10e5194
 
 RUN mkdir -p /srv $REPOSITORY_LOCAL_PATH
+
 WORKDIR /srv
 RUN git clone --branch stable https://github.com/phacility/libphutil.git libphutil && \
   cd libphutil && git checkout $LIBPHUTIL_COMMIT -b prod
